@@ -1,0 +1,26 @@
+syntax="proto3";
+
+service Backend {
+    rpc load_image (img_path) returns (image);
+    rpc predict_data (image_data) returns (image_prediction);
+}
+
+message image {
+    string img_content = 1;
+    int64 width = 2;
+    int64 height = 3;
+}
+
+message img_path {
+    string path = 1;
+}
+
+message image_prediction {
+    string label = 1;
+    float proba = 2;    
+}
+
+message image_data {
+    string path2 = 1;
+}
+

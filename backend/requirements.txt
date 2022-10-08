@@ -1,0 +1,5 @@
+opencv-python
+grpcio==1.39.0
+grpcio-tools==1.39.0
+tensorflow==2.9.1
+numpy
